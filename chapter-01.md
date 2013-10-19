@@ -9,19 +9,22 @@ tags: []
 Why This Book
 -------------
 
-I recently had some very close friends talk about their hesitation in adopting Git as
+I recently had some close friends talk about their hesitation in adopting Git as
 opposed to continuing to work with Subversion. I've used Subversion for many
 years, and advocated for its use. I have since jumped wholeheartedly on the
 Git bandwagon, so I wanted to find a way to tell the story of why I made the
 switch and why I think so much of the open source community is now based around
 Git and Git-friendly sites like GitHub.
 
-There's so much content out there about Git, and much of it is written at a level that's
-way higher than my expertise. But in a way, that's an issue. When you're first starting
-out learning something, the questions that you have are way different from the questions
-an experienced person has. Once you've won that knowledge, it's almost impossible to go
-back and think about what it was like when you were first learning. That puts you in a
-bad position to explain to someone else who's brand new.
+These friends are smart people, and if they're not convinced about Git, the problem
+is not them; it's that they haven't seen the right argument yet. There's so
+much content out there about Git, and much of it is written at a level that's
+way higher than my expertise. But in a way, that's an issue. When you're first
+starting out learning something, the questions that you have are way different
+from the questions an experienced person has. Once you've won that knowledge,
+it's almost impossible to go back and think about what it was like when you
+were first learning. That puts you in a bad position to explain to someone else
+who's brand new.
 
 Git seems particularly prone to this because it's based on some pretty complex notions
 of how to think about version control. In particular, once you internalize the concept 
