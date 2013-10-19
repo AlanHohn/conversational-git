@@ -97,15 +97,16 @@ Dogfooded
 ---------
 
 We'll start the next chapter momentarily, but first, I want to point out that this
-book is [dogfooded][]. It's part of my blog Variegated, which is hosted as a Git
-repository on GitHub. So you can fork that repository and get your own copy of
-this book to modify. If you make changes, you can send me a pull request so I
-can merge your changes into my version. That whole workflow is an essential part
-of why Git has become so popular for open-source projects, and a key purpose of this
-book is explaining that workflow and why it's so powerful.
+book is [dogfooded][]. It's hosted as a [Git repository][repo] on GitHub. So you can
+fork that repository and get your own copy of this book to modify. If you make
+changes, you can send me a pull request so I can merge your changes into my
+version. That whole workflow is an essential part of why Git has become so
+popular for open-source projects, and a key purpose of this book is explaining
+that workflow and why it's so powerful.
 
 The book is written using Markdown and processed using Jekyll. Much love to both
 those technologies and to GitHub Pages.
 
 [dogfooded]:http://en.wikipedia.org/wiki/Eating_your_own_dog_food
+[repo]:https://github.com/AlanHohn/conversational-git
 
