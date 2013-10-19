@@ -40,10 +40,8 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-/*
   ga('create', 'UA-44551815-1', 'anvard.org');
   ga('send', 'pageview');
-*/
 
 </script>
 
@@ -56,7 +54,7 @@
     <header class="site-header darken">
       <div class="wrap">
         <hgroup>
-          <h1><a href="/">{{ site.title }}</a></h1><br/>
+          <h1><a href="{{site.url}}">{{ site.title }}</a></h1><br/>
           <h6>by {{ site.owner.name }}</h6>
         </hgroup>
       </div>
