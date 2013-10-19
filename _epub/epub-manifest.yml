@@ -1,0 +1,33 @@
+
+# Designed to be processed by jekyll-ebook
+# https://github.com/lmullen/jekyll-ebook
+
+title: Conversational Git
+author: Alan Hohn
+date: October 19, 2013
+
+epub-filename: ../conversational-git.epub
+epub-cover-image: cover-image.png
+epub-stylesheet: stylesheet.css
+epub-metadata: metadata.xml
+epub-dir: .
+
+header-items:
+- title
+- description
+
+content-dir: ../
+contents: 
+  - section-title: Conversational Git
+    files:
+    - chapter-01.md
+    - chapter-02.md
+    - chapter-03.md
+    - chapter-04.md
+    - chapter-05.md
+    - chapter-06.md
+    - chapter-07.md
+    - chapter-08.md
+    - chapter-09.md
+    - chapter-10.md
+    - chapter-11.md

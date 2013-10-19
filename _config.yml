@@ -5,6 +5,12 @@ url: http://blog.anvard.org/conversational-git
 owner:
   name:           Alan Hohn
 
+links:
+  - title: EPUB
+    url: /conversational-git.epub
+  - title: MOBI
+    url: /conversational-git.mobi
+
 timezone:    America/Chicago
 future:      true
 pygments:    true
