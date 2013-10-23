@@ -53,6 +53,13 @@ in a way that followed real usage. I hope to present in a similar way.
 
 [svnbook]:http://svnbook.red-bean.com/
 
+I'm making a few assumptions about readers. The first is that readers know in general
+what version control tools are for, and therefore what Git is for. The second is
+that a reader of this book is familiar with Subversion or CVS, and is interested in
+knowing how a "distributed" version control system, and Git in particular, is different.
+If those assumptions don't apply to you, I hope you still get value, but you might
+not get as much.
+
 I'm calling this book "Conversational Git" both because I'm aiming for a conversational
 style and because, when learning a new language, a key goal is to be "conversational" --
 able to make basic small talk, even if not quite a native speaker.

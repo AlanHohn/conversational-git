@@ -27,8 +27,8 @@ take that "author" information from our current username. That works but it's mo
 polite to others to make it accurate.
 
 {% highlight text %}
-git config --global user.name <Your Name>
-git config --global user.email <Your Email>
+git config --global user.name "Your Name"
+git config --global user.email "Your Email"
 {% endhighlight %}
 
 This creates a plain text file called `.gitconfig` in your home directory, with
