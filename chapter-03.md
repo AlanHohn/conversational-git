@@ -136,7 +136,7 @@ Isabelle just did is download a *commit* from the `shared` repository. That is, 
 whole changeset came along, with its author information, information about what files
 were changed, and information identifying the parent of the commit, so Git can apply
 it accurately. So Isabelle's working copy is up-to-date, but her `git log` is also
-the same now as `parent` and `harry`.
+the same now as `shared` and `harry`.
 
 (Note for the pedantic: here is where I am *not* going to talk about the DAG. Nor
 am I going to talk about how "pull" is "fetch" plus "merge" and what each of those
