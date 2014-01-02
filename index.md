@@ -7,7 +7,7 @@ tags: []
 
 <h2>
 <p><a href="{{site.url}}/chapter-01.html">Chapter 1: Introduction</a></p>
-<p><a href="{{site.url}}/chapter-02.html">Chapter 2: Setup and Comitting</a></p>
+<p><a href="{{site.url}}/chapter-02.html">Chapter 2: Setup and Committing</a></p>
 <p><a href="{{site.url}}/chapter-03.html">Chapter 3: Clone, Push, and Pull</a></p>
 <p><a href="{{site.url}}/chapter-04.html">Chapter 4: Simultaneous Changes</a></p>
 <p><a href="{{site.url}}/chapter-05.html">Chapter 5: Constructive Conflict</a></p>
