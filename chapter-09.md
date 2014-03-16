@@ -31,15 +31,15 @@ version back, use `git checkout`:
 
 {% highlight text %}
 cd harry
-echo "I broke this file" > spear-01
-git checkout spear-01
+echo "I broke this file" > spear01
+git checkout spear01
 {% endhighlight %}
 
 If you made a typo in a commit message and you *haven't pushed it yet*, you
 can use `git commit --amend`:
 
 {% highlight text %}
-echo "As pretty a piece of flesh as any in Messina" > spear-04
+echo "As pretty a piece of flesh as any in Messina" > spear04
 git add .
 git commit -m "Dogbert"
 git commit --amend -m "Dogberry"
@@ -56,8 +56,8 @@ it before you commit it, just change it and do `git add` again. But if you reali
 shouldn't be committed at all:
 
 {% highlight text %}
-echo "Tempfile" > temp-01
-echo "Good change" > content-05
+echo "Tempfile" > temp01
+echo "Good change" > content05
 git add .
 {% endhighlight %}
 
@@ -66,7 +66,7 @@ I avoid using `git commit -m` in real life; better to let Git launch an editor
 and review what will be committed.)
 
 {% highlight text %}
-git reset temp-01
+git reset temp01
 git commit -m "Good only"
 {% endhighlight %}
 
@@ -76,12 +76,12 @@ unstaged.
 While we're at it we can add temp files to `.gitignore` so this doesn't happen again:
 
 {% highlight text %}
-echo "temp-*" > .gitignore
+echo "temp*" > .gitignore
 git add .
 git commit -m "ignore"
 {% endhighlight %}
 
-Note that even though we did `git add .` again, `temp-01` didn't get picked up this time.
+Note that even though we did `git add .` again, `temp01` didn't get picked up this time.
 The addition to `.gitignore` takes effect immediately, even before we commit it.
 
 If we really hosed up our working copy, we can get it back easily:
@@ -92,7 +92,7 @@ git reset --hard
 {% endhighlight %}
 
 In this case `--hard` means, "it's OK to update my working copy". This is of
-course a bit dangerous because we lose all uncommitted changes. Also, `temp-01`
+course a bit dangerous because we lose all uncommitted changes. Also, `temp01`
 of course didn't come back.
 
 Even Bigger Changes
@@ -120,20 +120,20 @@ look up the hash in the history to get to it.
 A simple example:
 
 {% highlight text %}
-echo "broken" > content-01
+echo "broken" > content01
 git commit -am "Breaking it is easy to do"
-git checkout HEAD@{1} content-01
+git checkout HEAD@{1} content01
 git commit -am "Fixing isn't much harder"
 {% endhighlight %}
 
 Another:
 
 {% highlight text %}
-echo "broke" > content-02
+echo "broke" > content02
 git commit -am "Ain't got no home"
-echo "broker" > content-02
+echo "broker" > content02
 git commit -am "A no place to roam"
-git checkout HEAD@{2} content-02
+git checkout HEAD@{2} content02
 git commit -am "And I sing like a frog"
 {% endhighlight %}
 

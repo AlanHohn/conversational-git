@@ -96,7 +96,7 @@ Let's say we do this:
 
 {% highlight text %}
 echo "Hi yourself" >> README
-echo "Adding some content" > content-01
+echo "Adding some content" > content01
 git commit -m "README and content"
 {% endhighlight %}
 
@@ -117,7 +117,9 @@ git add .
 git commit -m "README and content"
 {% endhighlight %}
 
-The `git add` command is recursive, so this would also cover subdirectories. 
+Note the period at the end of the `git add` command, telling Git to add any new and changed
+files in the current directory. The `git add` command is recursive, so this would also cover 
+subdirectories. 
 
 Removing files
 --------------
@@ -134,15 +136,15 @@ do `git rm` with each one, so there's one more version of the `add` command to
 help us:
 
 {% highlight text %}
-touch bad-01 bad-02 bad-03 bad-04
+touch bad01 bad02 bad03 bad04
 git add .
-git commit -am "Bad files"
-rm bad-*
+git commit -m "Bad files"
+rm bad*
 git commit -m "Remove bad files"
 {% endhighlight %}
 
 Again we find that nothing happens because those changes weren't staged. We can't
-do `git rm bad-*` because those files are already gone from the working copy. But
+do `git rm bad*` because those files are already gone from the working copy. But
 we can do this:
 
 {% highlight text %}

@@ -15,11 +15,18 @@ file. Starting from the scratch directory again:
 
 {% highlight text %}
 cd harry
-echo "Harry's line" >> content-01
+echo "Harry's line" >> content01
 git commit -am "Harry"
 git push
+{% endhighlight %}
+
+Notice that I added an `a` in front of the `m` in the `git commit` command. Because
+I'm not adding any new files, only updating modified files, and I know it's safe to
+pick up all my changes in the commit, I can skip the separate `git add` step.
+
+{% highlight text %}
 cd ../isabelle
-echo "Isabelle's line" >> content-01
+echo "Isabelle's line" >> content01
 git commit -am "Isabelle"
 git push
 {% endhighlight %}
@@ -31,28 +38,33 @@ kick off a "merge commit"; instead, it just reports a conflict and waits for us
 to do something.
 
 Similar to Subversion, Git creates a "conflict" version of the original file,
-so now `content-01` is full of markers like `<<<<<<<< HEAD`. As you might have
+so now `content01` is full of markers like `<<<<<<<< HEAD`. As you might have
 noticed from the times we used `git log`, Git uses hashes as labels for commits, so
-the file looks a little messy.
+the file looks a little messy. 
+
+(A hash is a long alphanumeric string derived from some data, in this case the
+commit itself. Git uses them because they can be made without asking some
+central server for the "next sequence number" and are very likely to be
+unique.)
 
 Push The Reset Button
 ---------------------
 
 Hopefully Isabelle can figure out what the file should look like. If not, it's easy
-and safe to reset back to a point before the merge:
+and safe to reset back to a point before the merge (try it):
 
 {% highlight text %}
 git merge --abort
 {% endhighlight %}
 
-Back in the olden days before electricity, we had to do this with `git reset
+Back in the olden days before electricity, we did this with `git reset
 --hard HEAD`. It still worked.  You will read in Git tutorials that the
 `--hard` option to HEAD can be unsafe because it modifies the working copy.
-This could be an issue for us, if we weren't smart enough to make sure we never
-try to pull into uncommitted changes. That's still a good rule, because while
-`git merge --abort` will try to put your working copy back the way it was, and
-generally will succeed, if you've committed all of your changes you're
-guaranteed to be able to get them back.
+This is not an issue for us, because we are smart enough to always pull only
+when all of our changes have been committed (or stashed). That's a good rule
+to follow, because while `git merge --abort` will try to put your working copy
+back the way it was, and generally will succeed, if you've committed all of
+your changes you're guaranteed to be able to get them back.
 
 I haven't introduced `git reset` yet. Why? Because Harry and Isabelle haven't
 made any mistakes. They're very good at their jobs. But they'll make some
@@ -62,8 +74,14 @@ Finishing the merge
 -------------------
 
 Finally Isabelle gets a chance to talk to Harry, and they decide that her line
-should come first. She does `git pull` again, and gets the conflict back, and this
-time she edits the file `content-01` to resolve the conflict.
+should come first. She does 
+
+{% highlight text %}
+git pull
+{% endhighlight %}
+
+again, and gets the conflict back, and this time she edits the file `content01` to 
+resolve the conflict.
 
 After that she can just:
 
@@ -91,18 +109,20 @@ in Git is small and cheap, so it would be OK for Isabelle to just commit her cha
 anyway and then come back and fix them later. But Isabelle has another option.
 
 `git stash` creates what is essentially a temporary commit, but it doesn't apply it
-to the working copy. Instead, it returns the working copy to the previous "clean" state.
+to the working copy or upload it to the remote repository on a `push`. Instead,
+it keeps it in a special separate storage and returns the working copy to the
+previous "clean" state.
 
 Let's say things went down like this:
 
 {% highlight text %}
 cd ../harry
 git pull
-echo "Third down and 10" >> content-03
+echo "Third down and 10" >> content03
 git commit -am "Down and distance"
 git push
 cd ../isabelle
-echo "Third, Third Third" >> content-03
+echo "Third, Third Third" >> content03
 {% endhighlight %}
 
 At this point Isabelle wants to pull in Harry's change, presumably to run it. (I know,
@@ -133,16 +153,28 @@ typically make it unnecessary under normal circumstances.
 Wrapping Up
 -----------
 
-It's entirely possible that you've got some conflicts or commits in either Harry's or
-Isabelle's repository that haven't been resolved yet. Before we go on, you'll want to
-make sure both sides have no remaining uncommitted changes and are up-to-date with
-each other. The file content doesn't matter as I'll avoid making any assumptions about
-how the conflicts were resolved.
+If you've been following along perfectly (congratulations) you just need to edit
+`content03` in Isabelle's directory to remove the conflict tags, then do:
+
+{% highlight text %}
+git add .
+git commit -m "Resolve"
+git push
+cd ../harry
+git pull
+{% endhighlight %}
+
+However, if you haven't been following as closely but want to catch up, it's
+entirely possible that you've got some conflicts or commits in either Harry's
+or Isabelle's repository that haven't been resolved yet. Before we go on,
+you'll want to make sure both sides have no remaining uncommitted changes and
+are up-to-date with each other. The file content doesn't matter as I'll avoid
+making any assumptions about how the conflicts were resolved. 
 
 Neither the workflow nor the capabilities in this chapter are different in Git
 from how they are in Subversion. Resolving conflicting changes is painful no
 matter what. As we work through subsequent chapters I hope to demonstrate some
-ways that successful Git projects use the tool to control the pain of merging.
+ways that successful Git projects use Git to control the pain of merging.
 At the very least, they are successful at putting that pain in a box so that
 they can decide when to experience it. They do this by getting away from making
 all changes on a single branch; in fact, most successful Git projects are

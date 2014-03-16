@@ -30,7 +30,7 @@ different rules about keeping old feature branches around.)
 {% highlight text %}
 cd harry
 git checkout shakespeare
-echo "Can the world buy such a jewel?" > spear-02
+echo "Can the world buy such a jewel?" > spear02
 git add .
 git commit -m "Claudio"
 {% endhighlight %}
@@ -81,7 +81,7 @@ to make a local version of it:
 
 {% highlight text %}
 git checkout shakespeare
-echo "Yea, and a case to put it into" >> spear-02
+echo "Yea, and a case to put it into" >> spear02
 git commit -am "Benedick"
 git push
 {% endhighlight %}

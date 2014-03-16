@@ -7,7 +7,7 @@ tags: []
 
 <h2>
 <p><a href="{{site.url}}/chapter-01.html">Chapter 1: Introduction</a></p>
-<p><a href="{{site.url}}/chapter-02.html">Chapter 2: Setup and Comitting</a></p>
+<p><a href="{{site.url}}/chapter-02.html">Chapter 2: Setup and Committing</a></p>
 <p><a href="{{site.url}}/chapter-03.html">Chapter 3: Clone, Push, and Pull</a></p>
 <p><a href="{{site.url}}/chapter-04.html">Chapter 4: Simultaneous Changes</a></p>
 <p><a href="{{site.url}}/chapter-05.html">Chapter 5: Constructive Conflict</a></p>
@@ -18,4 +18,9 @@ tags: []
 <p><a href="{{site.url}}/chapter-10.html">Chapter 10: Serious Issues</a></p>
 <p><a href="{{site.url}}/chapter-11.html">Chapter 11: Flow</a></p>
 </h2>
+
+I am grateful for the attention this book has received since I first posted it. I continue to
+make <a href="{{site.url}}/updates.html">updates</a> thanks to the pull requests and comments 
+I have received.
+
 

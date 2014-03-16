@@ -27,7 +27,7 @@ Isabelle has some work to do and makes a feature branch.
 
 {% highlight text %}
 git checkout -b hamlet
-echo "Nymph, in your orisons. Be all my sins remember'd" > spear-03
+echo "Nymph, in your orisons. Be all my sins remember'd" > spear03
 git add .
 git commit -m "Hamlet and Ophelia"
 git push --set-upstream origin hamlet
@@ -38,7 +38,7 @@ And meanwhile Harry is working too.
 {% highlight text %}
 cd ../harry
 git checkout -b julius
-echo "The fault, dear Brutus, is not in our stars" > spear-03
+echo "The fault, dear Brutus, is not in our stars" > spear03
 git add .
 git commit -m "Cassius and Brutus"
 git push --set-upstream origin julius

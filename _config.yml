@@ -1,6 +1,7 @@
 title:            Conversational Git
 description:      A friendly Git introduction
 url: http://blog.anvard.org/conversational-git
+#url: http://localhost:4000
 
 owner:
   name:           Alan Hohn

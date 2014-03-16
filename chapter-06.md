@@ -88,10 +88,10 @@ all the work he wants here. Anything he commits will affect the `shakespeare` br
 only, and will not affect the original branch (which is called `master`).
 
 {% highlight text %}
-echo "Why man, he doth bestride the narrow world like a Colossus" > spear-01
+echo "Why man, he doth bestride the narrow world like a Colossus" > spear01
 git add .
 git commit -m "Cassius"
-echo "But masters, remember that I am an ass" >> spear-01
+echo "But masters, remember that I am an ass" >> spear01
 git commit -am "Dogberry"
 {% endhighlight %}
 
@@ -106,7 +106,7 @@ about feature branches yet:
 
 {% highlight text %}
 cd ../isabelle
-echo "This is no ordinary line" > content-04
+echo "This is no ordinary line" > content04
 git add .
 git commit -m "Fourth"
 git push
@@ -125,7 +125,7 @@ git pull
 If you're following along, you'll see that Git reports this as a
 "fast-forward". No merge is taking place here. Also, you'll notice that `git
 log` does not show our two Shakespeare related commits in the log, and the new
-`spear-01` file is not in the working copy.
+`spear01` file is not in the working copy.
 
 Merging a Feature
 -----------------
@@ -152,7 +152,7 @@ cd ..
 {% endhighlight %}
 
 Now Isabelle has the changes too. She does not, however, have a copy of the
-`shakespeare` branch; she only gets the new file `spear-01` because it was
+`shakespeare` branch; she only gets the new file `spear01` because it was
 merged into `master`. (She does have a `master` branch, of course. It got created
 when we cloned the `shared` repository for her.)
 

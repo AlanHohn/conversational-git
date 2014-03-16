@@ -31,11 +31,11 @@ pretty easy.
 {% highlight text %}
 cd harry
 git checkout -b much-ado
-echo "Were she other than as she is, she were unhandsome" >> spear-02
+echo "Were she other than as she is, she were unhandsome" >> spear02
 git add .
 git commit -m "Benedick"
 git checkout master
-echo "But being no other but as she is, I do not like her" >> spear-03
+echo "But being no other but as she is, I do not like her" >> spear03
 git commit -am "Benedick continues"
 {% endhighlight %}
 

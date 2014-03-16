@@ -10,11 +10,11 @@ tags: []
 Multiple Repositories
 ---------------------
 
-In Subversion, the only way we work with multiple repositories was through
+In Subversion, the only way we work with multiple repositories is through
 a mirror, which has to have exactly the same history to work correctly. Git
 is designed around multiple repositories; to help work on a project, you
-have to have not just a working copy but the whole repository copy so you can
-commit, push, and pull.
+have to have not just a working copy but a "clone" of the whole repository so
+you can commit, push, and pull.
 
 Like Subversion, a lot of teams using Git share a common repository located on
 some server. Rather than sending changes around to each other, which isn't efficient,
@@ -38,14 +38,15 @@ Bare Repositories
 
 One thing I am forced to talk about is a "bare" repository. This is just a
 repository with no working copy. We're going to be using "push" to send commits
-to another repository, and Git wants to make sure that we don't mess up that
-repository's working copy by doing that. So by default, it's going to reject any
-push that isn't targeted at a bare repository. Server repositories are *always*
-bare, so you won't see this issue in real life. 
+to a "remote" repository, and Git wants to make sure that we don't mess up the
+remote repository's working copy by doing that. So by default, it's going to
+reject any push that isn't targeted at a bare repository. Server repositories
+are *always* bare, so you won't see this issue in real life. 
 
 I could make you create a new bare repository, but then we wouldn't have the
 stuff from last chapter. Instead, a quick workaround; we'll make a bare
-repository based on the non-bare one we created last time.
+repository based on the non-bare one we created last time. This workaround also
+teaches an important command, `clone`.
 
 Assuming we start back in our scratch directory (so if we're still in `repo`,
 we need to do `cd ..`), do this: 
@@ -105,9 +106,10 @@ Harry wants to make some changes:
 
 {% highlight text %}
 cd harry
-echo "Adding some more content" >> content-01
-echo "Second content" > content-02
-git commit -am "Harry content"
+echo "Adding some more content" >> content01
+echo "Second content" > content02
+git add .
+git commit -m "Harry content"
 {% endhighlight %}
 
 At this point, `git log` in `harry` will look different from `git log` in `shared` or
