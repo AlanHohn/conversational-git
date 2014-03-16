@@ -15,6 +15,10 @@ Version 1.1:
 * Changes to chapters 2-5 as suggested by a reader. Thanks for the
   detailed comments.
 
+Version 1.1a:
+
+* Also update the EPUB and MOBI versions.
+
 [ceilfors]:https://github.com/ceilfors
 [gliptak]:https://github.com/gliptak
 
