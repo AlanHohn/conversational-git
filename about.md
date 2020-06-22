@@ -24,12 +24,12 @@ I'm trying to answer these questions on behalf of smart people that want to unde
 the tool *before* they put in the effort to get into its architecture and learn the more advanced
 commands that even a regular user hardly needs.
 
-This book is licensed [CC BY-NC-SA 3.0 US][license]. The book is published
+This book is licensed [CC BY 4.0][license]. The book is published
 using Markdown, Jekyll, and GitHub Pages.  Pull requests are gratefully
 accepted. Feature branches are much preferred. For information on creating a
 feature branch, read the book :-).
 
-[license]:http://creativecommons.org/licenses/by-nc-sa/3.0/
+[license]:https://creativecommons.org/licenses/by/4.0/legalcode
 
 In addition to this book, I have a blog called [Variegated][]. I'm a software architect
 employed by Lockheed Martin. All opinions are mine and are not necessarily those of my employer.

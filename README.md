@@ -9,8 +9,8 @@ and GitHub Pages.
 Pull requests are gratefully accepted. Feature branches are much preferred. For information on
 creating a feature branch, read the book :-).
 
-Please see the LICENSE file for information on copying and quoting, or read [here][byncsa].
+Please see the LICENSE file for information on copying and quoting, or read [here][ccby].
 
-[byncsa]:http://creativecommons.org/licenses/by-nc-sa/3.0/
+[ccby]:https://creativecommons.org/licenses/by/4.0/
 
 
